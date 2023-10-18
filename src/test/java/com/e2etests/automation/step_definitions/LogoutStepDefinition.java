@@ -32,8 +32,8 @@ public class LogoutStepDefinition {
 	}
 
 	@Then("Je me redirige vers la page connexion {string}")
-	public void jeMeRedirigeVersLaPageConnexion(String logoutURL) {
+	public void jeMeRedirigeVersLaPageConnexion(String url) {
 		String actualURL = Setup.driver.getCurrentUrl();
-		Assert.assertEquals(actualURL, logoutURL);
+		Assert.assertEquals(actualURL, url);
 	}
 }
