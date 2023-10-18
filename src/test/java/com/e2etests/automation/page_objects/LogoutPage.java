@@ -22,7 +22,7 @@ public class LogoutPage {
 	public static WebElement titleProductss;
 	@FindBy(how = How.XPATH, using = "//h3[@data-test='error']")
 	public static WebElement messageErrorr;
-	@FindBy(how = How.CLASS_NAME, using = "bm-burger-button")
+	@FindBy(how = How.ID, using = "react-burger-menu-btn")
 	public static WebElement munuBurgerBtn;
 	@FindBy(how = How.ID, using = "logout_sidebar_link")
 	public static WebElement logoutBtn;
@@ -43,20 +43,18 @@ public class LogoutPage {
 		passWord.clear();
 		passWord.sendKeys(configFileReader.getProperties("home.password"));
 		logBtnn.click();
-		Thread.sleep(3000);		
+		Thread.sleep(3000);
 	}
 
 	public void clicOnButtonBurger() {
-		munuBurgerBtn.clear();
 		munuBurgerBtn.click();
-	
 
 	}
 
 	public void clicOnButtonLogout() {
-		logoutBtn.clear();
+
 		logoutBtn.click();
-		
+
 	}
 
 }
